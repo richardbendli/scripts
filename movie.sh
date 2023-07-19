@@ -2,7 +2,7 @@
 
 # dependencies: fzf
 # path to the movies folder
-movies="/home/ben/media/movies"
+movies="/home/$USER/media/movies"
 
 menu=$(ls -a "$movies" | uniq -u | fzf --height=100% --reverse --header-first)
 
